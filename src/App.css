@@ -3,17 +3,18 @@
 "https://eqjrg9.webwave.dev/lib/eqjrg9/unsplash-image-lz35iq6o.jpg"
   );
   
-  height: 1000px; /* You must set a specified height */
+  height: 500px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
+ 
   
 
 }
 .Intro{
   margin-top:10%;
   font-size: 30px;
-  color:burlywood;
+  color:chocolate;
   margin-left: 10%;
   font-style:normal;
   line-height: 18px;
@@ -69,7 +70,7 @@
   width: 20%;
   margin-top:20%;
   height: 8%;
-  color:burlywood;
+  color:chocolate;
   border: none;
   padding: 15px 32px;
   text-align: center;
@@ -84,4 +85,9 @@
   background-color:rgba(24, 100, 171, 0.1);
   color:hotpink;
   border:5px;
+}
+
+.Aboutdata{
+  color:aqua;
+
 }

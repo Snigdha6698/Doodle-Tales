@@ -1,7 +1,15 @@
 import React from 'react';
 import { Component } from 'react';
 import './App.css';
+import Navigation from "./navbar.jsx";
+import Aboutdisply from "./Aboutuslink.jsx";
+import Blogdisply from "./bloglink.jsx";
+import Contactdisply from "./contactuslink.jsx";
+import Homedisply from "./Homepagelink.jsx";
+import Offerdisply from "./offerlink.jsx";
+import Pricedisply from "./priceliselist.jsx";
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 class App extends Component{
   handleClick = () => {
@@ -11,17 +19,17 @@ class App extends Component{
     return(
       <>
       <div class="background">
-      
-
-     <div class="announcementBar" role="banner" >      
-      <a class="links" href="/Homepagelink" target="_blank">Home Page </a>
-       <a class= "links" href="/Aboutuslink" target="_blank">About Us </a>
-       <a class="links" href="/offerlink" target="_blank">Offer</a>
-       <a class="links" href="/priseliselink" target="_blank">Price List</a>
-        <a class="links" href="/bloglink.jsx" target="_blank">Blog</a>
-        <a class="links" href="/contactuslink" target="_blank">Contact Us</a>
-    </div>
-
+        <Router>
+        <Navigation/>
+        <Routes>
+          <Route path='/Homepagelink' exact='/Homepagelink' element={<Homedisply />} ></Route>
+          <Route path='/Aboutuslink' exact='/Aboutuslink' element={<Aboutdisply/>}></Route>
+          <Route path='/offerlink' exact='/offerlink' element={<Offerdisply/>}></Route>
+          <Route path='/priseliselink' exact='/priseliselink' element={<Pricedisply/>}></Route>
+          <Route path='/bloglink' exact='/bloglink' element={<Blogdisply/>}></Route>
+          <Route path='/contactuslink' exact='/contactuslink' element={<Contactdisply/>}></Route>
+        </Routes>
+        </Router>
         <div className='Intro'>
           <h1> PawJoy: Pet Paradise</h1></div>
           <div className="caption">
@@ -29,7 +37,12 @@ class App extends Component{
           </div>
       
           <button class="button button1" onClick={this.handleClick}>Check Offer!</button>
-          </div>
+
+
+     </div>
+     <Aboutdisply/>
+
+
     </>
     )
   }
